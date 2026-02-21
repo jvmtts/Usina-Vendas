@@ -4,7 +4,7 @@ export const produtos = [
     nome: "Colete Salva Vidas Prolife Hydro Black Edition",
     categoria: "Coletes",
     preco: "R$ 620,00",
-    descricao: "O Colete Salva-Vidas Hydro Black Edition Prolife foi desenvolvido especialmente para a prática de atividades aquáticas e náuticas através do seu design tecnológico totalmente anatômico e focado no desempenho. É tão confortável que nem parece um colete!\n\nComo se não bastasse, ao contrário de outros modelos de coletes slim, o Hydro é Homologado pela Marinha do Brasil, garantindo a segurança e resistência habituais dos produtos Prolife.",
+    descricao: "O Colete Salva-Vidas Hydro Black Edition Prolife foi desenvolvido especialmente para a prática de atividades aquáticas e náuticas através do seu design tecnológico totalmente anatômico e focado no desempenho. É tão confortável que nem parece um colete!\nComo se não bastasse, ao contrário de outros modelos de coletes slim, o Hydro é Homologado pela Marinha do Brasil, garantindo a segurança e resistência habituais dos produtos Prolife.",
     fichaTecnica: { "Marca": "Prolife", "Modelo": "Hydro Black Edition", "Número de homologação da Marinha": "211.001/2020" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_953022-MLB101405017190_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp",
               "https://http2.mlstatic.com/D_NQ_NP_2X_648011-MLB101405036988_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp",
@@ -37,7 +37,7 @@ export const produtos = [
     preco: "R$ 89,90",
     descricao: "Luvas desportivas de alta aderência para uma pilotagem segura e confortável, mesmo molhadas.",
     fichaTecnica: { "Código": "LUV-01", "Material": "Neoprene/Silicone" },
-    imagens: ["https://via.placeholder.com/600x600?text=Foto+Luva+1"],
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_676684-MLB107332816179_022026-F-jetpilot-hold-fast-short-finger-pwc-luvas-esportes-aquaticos.webp"],
     variacoes: { cores: ["Preto/Laranja"], tamanhos: ["M", "G"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
