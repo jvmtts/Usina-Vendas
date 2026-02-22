@@ -35,12 +35,15 @@ export const produtos = [
     nome: "Body Maio Manga Longa Preto Johnn Brava",
     categoria: "Acessórios",
     preco: "R$ 452,99",
-    descricao: "Luvas desportivas de alta aderência para uma pilotagem segura e confortável, mesmo molhadas.",
+    descricao: "O Body/Maiô Manga Longa Preto da Johnn Brava foi desenvolvido para oferecer desempenho dentro e fora da água. Produzido com Lycra EMANA Performance, o tecido absorve o calor do corpo e o transforma em raios infravermelhos longos, auxiliando na circulação sanguínea, reduzindo a fadiga muscular e proporcionando mais conforto e bem-estar",
     fichaTecnica: { "Marca": "Johnn Brava", "Material": "Lycra" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_910069-MLB107430878625_022026-F-body-maio-manga-longa-preto-johnn-brava.webp"],
-    variacoes: { cores: ["Preto/Laranja"], tamanhos: ["XG"] },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_721532-MLB102627476360_122025-F.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_910069-MLB107430878625_022026-F-body-maio-manga-longa-preto-johnn-brava.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_747262-MLB107430878627_022026-F-body-maio-manga-longa-preto-johnn-brava.webp"
+    ],
+    variacoes: { cores: ["Preto"], tamanhos: ["XG"] },
     linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://mercadolivre.com.br"
+    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6282955276-body-maio-manga-longa-preto-johnn-brava-_JM"
   },
   {
     id: 4,
