@@ -2,232 +2,277 @@ export const produtos = [
   {
     id: 1,
     nome: "Colete Salva Vidas Prolife Hydro Black Edition",
-    categoria: "Coletes",
+    categoria: ["Coletes"],
     preco: "R$ 620,00",
     descricao: "O Colete Salva-Vidas Hydro Black Edition Prolife foi desenvolvido especialmente para a prática de atividades aquáticas e náuticas através do seu design tecnológico totalmente anatômico e focado no desempenho. É tão confortável que nem parece um colete!\nComo se não bastasse, ao contrário de outros modelos de coletes slim, o Hydro é Homologado pela Marinha do Brasil, garantindo a segurança e resistência habituais dos produtos Prolife.",
     fichaTecnica: { "Marca": "Prolife", "Modelo": "Hydro Black Edition", "Número de homologação da Marinha": "211.001/2020" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_953022-MLB101405017190_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_648011-MLB101405036988_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_733218-MLB101405036990_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp"
-    ],
-    variacoes: { cores: ["Preto"], tamanhos: ["EG"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_953022-MLB101405017190_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_648011-MLB101405036988_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_733218-MLB101405036990_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp"],
+    variacoes: { Cores: ["Preto"], Tamanhos: ["EG"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6079937674-colete-salva-vidas-prolife-hydro-black-edition-_JM"
   },
   {
     id: 2,
     nome: "Canijet Limpeza Turbina Jet Ski Ferramenta Barco",
-    categoria: ["Âncoras", "Acessórios"],
+    categoria: ["Âncoras"],
     preco: "R$ 499,00",
-    descricao: "O Canijet Âncora Alfa é a ferramenta multifuncional indispensável para quem busca segurança e praticidade na navegação. Desenvolvido para situações de emergência ou manutenção, o Canijet foi projetado para ser compacto, resistente e fácil de manusear, ideal para levar em qualquer aventura — na água, na trilha ou no acampamento.\n\nCaracterísticas:\nMede 50 cm aberto e 26 cm fechado, cabendo facilmente em qualquer compartimento.\nGancho funcional para limpeza de detritos da turbina do jet-ski ou para puxar objetos e peixes.\nLâmina serrilhada que corta cabos e cordas com eficiência, ajudando em situações de emergência.\nEstrutura reforçada com design pensado para facilitar o uso e aumentar a durabilidade.\n\nGarantia do vendedor: 7 dias",
-    fichaTecnica: { "Marca": "Âncora Alfa", "Modelo": "Canijet", "Categoria": "Acessórios para Veículos", "Material": "Aço inoxidável" },
-    imagens: [
-      "https://http2.mlstatic.com/D_Q_NP_945248-MLA101195518093_122025-F-canijet-limpeza-turbina-jet-ski-ferramenta-barco.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_970036-MLA100699451228_122025-F-canijet-limpeza-turbina-jet-ski-ferramenta-barco.webp",
-      "https://http2.mlstatic.com/D_Q_NP_890779-MLA101195556575_122025-F-canijet-limpeza-turbina-jet-ski-ferramenta-barco.webp"
-    ],
-    variacoes: { cores: ["Prata"], tamanhos: ["Único"] },
-    linkWhatsapp: "https://api.whatsapp.com/send/?phone=5511964467000&text=Olá%2C+vim+da+loja+virtual+e+gostaria+de+mais+informações&type=phone_number&app_absent=0",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6160553210-canijet-limpeza-turbina-jet-ski-ferramenta-barco-_JM#&gid=1&pid=1"
+    descricao: "O Canijet Âncora Alfa é a ferramenta multifuncional indispensável para quem busca segurança e praticidade na navegação...",
+    fichaTecnica: { "Marca": "Âncora Alfa", "Modelo": "Canijet", "Material": "Aço inoxidável" },
+    imagens: ["https://http2.mlstatic.com/D_Q_NP_945248-MLA101195518093_122025-F-canijet-limpeza-turbina-jet-ski-ferramenta-barco.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_970036-MLA100699451228_122025-F-canijet-limpeza-turbina-jet-ski-ferramenta-barco.webp", "https://http2.mlstatic.com/D_Q_NP_890779-MLA101195556575_122025-F-canijet-limpeza-turbina-jet-ski-ferramenta-barco.webp"],
+    variacoes: { Cores: ["Prata"], Tamanhos: ["Único"] },
+    linkwhatsapp: "https://wa.me/5511964467000",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6160553210-canijet-limpeza-turbina-jet-ski-ferramenta-barco-_JM"
   },
   {
     id: 3,
     nome: "Body Maio Manga Longa Preto Johnn Brava",
-    categoria: "Acessórios",
+    categoria: ["Roupas"],
     preco: "R$ 452,99",
-    descricao: "O Body/Maiô Manga Longa Preto da Johnn Brava foi desenvolvido para oferecer desempenho dentro e fora da água. Produzido com Lycra EMANA Performance, o tecido absorve o calor do corpo e o transforma em raios infravermelhos longos, auxiliando na circulação sanguínea, reduzindo a fadiga muscular e proporcionando mais conforto e bem-estar",
+    descricao: "O Body/Maiô Manga Longa Preto da Johnn Brava foi desenvolvido para oferecer desempenho dentro e fora da água...",
     fichaTecnica: { "Marca": "Johnn Brava", "Material": "Lycra" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_721532-MLB102627476360_122025-F.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_910069-MLB107430878625_022026-F-body-maio-manga-longa-preto-johnn-brava.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_747262-MLB107430878627_022026-F-body-maio-manga-longa-preto-johnn-brava.webp"
-    ],
-    variacoes: { cores: ["Preto"], tamanhos: ["XG"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_721532-MLB102627476360_122025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_910069-MLB107430878625_022026-F-body-maio-manga-longa-preto-johnn-brava.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_747262-MLB107430878627_022026-F-body-maio-manga-longa-preto-johnn-brava.webp"],
+    variacoes: { Cores: ["Preto"], Tamanhos: ["XG"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6282955276-body-maio-manga-longa-preto-johnn-brava-_JM"
   },
   {
     id: 4,
     nome: "Colete Salva Vidas Prolife Neoprene Protech Extreme",
-    categoria: "Coletes",
+    categoria: ["Coletes"],
     preco: "R$ 299,00",
-    descricao: "Coletes Salva-Vidas Classe V Prolife são homologados pela Marinha do Brasil, garantindo a sua proteção por completo! Usado e aprovado pelos atletas profissionais patrocinados pela marca, o Colete Salva-Vidas Homologado Protech Extreme foi desenvolvido para garantir o melhor desempenho para quem não abre mão de ter um colete de altíssima qualidade sem restrições, que exceda seus limites com confiança e o conforto de saber que você está bem protegido.",
-    fichaTecnica: { "Marca": "Prolife", "Modelo": "Neoprene Protech Extreme", "Número de homologação da Marinha": "211.001/2020" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_635862-MLB101409358622_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_905389-MLB101911101319_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_910651-MLB101910902801_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp"
-    ],
-    variacoes: { cores: ["Selva"], tamanhos: ["M"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    descricao: "Coletes Salva-Vidas Classe V Prolife são homologados pela Marinha do Brasil...",
+    fichaTecnica: { "Marca": "Prolife", "Modelo": "Neoprene Protech Extreme" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_635862-MLB101409358622_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_905389-MLB101911101319_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_910651-MLB101910902801_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp"],
+    variacoes: { Cores: ["Selva"], Tamanhos: ["M"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
   {
     id: 5,
     nome: "Kit Jet - Âncora Alfa Compact Dobrável Em Inox - 1.4kg",
-    categoria: "Âncoras",
+    categoria: ["Âncoras"],
     preco: "R$ 839,00",
-    descricao: "Kit Jet - Âncora Alfa Compact Dobrável Em Inox - 1.4kg\n\nCaracterísticas do Produto:\nDesign Dobrável: Facilita o armazenamento e transporte, tornando a âncora compacta e prática de carregar.\nMaterial de Alta Qualidade: Fabricada em aço inoxidável, garantindo resistência à corrosão e durabilidade em ambientes marítimos.\nPeso Leve (1.4kg): Equivalente a uma âncora Bruce de 4.0kg, mas com muito mais leveza e facilidade de manuseio. Benefícios:\nLeve e Compacta: Facilita o transporte e armazenamento, sem comprometer a eficácia.\nEficiência Garantida: Seu design otimizado proporciona uma ancoragem rápida e firme, mesmo em condições adversas.\nDurabilidade: A construção em aço inoxidável assegura uma longa vida útil, resistente à oxidação e danos causados pela água salgada.",
-    fichaTecnica: { "Peso": "1.4kg", "Marca": "Aço inoxidável", "Indicado para": "Jet Skis, caiaques e barcos de até 15 pés", "Função": "Ancoragem rápida e eficiente, podendo ser utilizada em qualquer local" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_701051-MLA99853150699_112025-F.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_659977-MLA92473408866_092025-F.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_714235-MLA92473251938_092025-F.webp"
-            ],
-    variacoes: { cores: ["Verde"], tamanhos: ["Único"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://www.mercadolivre.com.br/kit-jet-ncora-alfa-compact-dobravel-em-inox-14kg/p/MLB45673805?pdp_filters=item_id:MLB4441737373"
+    descricao: "Kit Jet - Âncora Alfa Compact Dobrável Em Inox - 1.4kg...",
+    fichaTecnica: { "Peso": "1.4kg", "Marca": "Aço inoxidável" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_701051-MLA99853150699_112025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_659977-MLA92473408866_092025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_714235-MLA92473251938_092025-F.webp"],
+    variacoes: { Cores: ["Verde"], Tamanhos: ["Único"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://www.mercadolivre.com.br"
   },
   {
     id: 6,
     nome: "Kit Cabo Rebocador Atracador 5m Âncora Alfa Náilon Verde Limão Jet Ski",
-    categoria: "Acessórios",
+    categoria: ["Acessórios"],
     preco: "R$ 189,00",
-    descricao: "Kit Cabo Trançado + Boia de Isopor + Mosquetão\nAcompanha Boia Isopor, Mosquetão e Cabo Trançado 5,0 metros\nKit compacto, montado, pronto para usar.\nIdeal para Jet Ski",
-    fichaTecnica: { "Marca": "Âncora Alfa", "Unidade de Venda": "M", "Material": "Náilon", "Cor": "Verde Limão" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_907769-MLA100458101268_122025-F.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_929929-MLA100951917755_122025-F.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_612824-MLA100951580161_122025-F.webp"
-    ],
-    variacoes: { cores: ["Verde Limão"], tamanhos: ["Ùnico"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://www.mercadolivre.com.br/kit-cabo-rebocador-atracador-5m-ncora-alfa-nailon-verde-limo-jet-ski/p/MLB63018198?pdp_filters=item_id:MLB4445402395"
+    descricao: "Kit Cabo Trançado + Boia de Isopor + Mosquetão...",
+    fichaTecnica: { "Marca": "Âncora Alfa", "Material": "Náilon" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_907769-MLA100458101268_122025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_929929-MLA100951917755_122025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_612824-MLA100951580161_122025-F.webp"],
+    variacoes: { Cores: ["Verde Limão"], Tamanhos: ["Ùnico"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://www.mercadolivre.com.br"
   },
   {
     id: 7,
     nome: "Johnn Brava Camisa Lycra Manga Longa Com Proteção Uv Preta Plus Size",
-    categoria: "Acessórios",
+    categoria: ["Roupas"],
     preco: "R$ 380,00",
-    descricao: "Camisa Lycra Manga Longa com Proteção UV 50+ Slim Plus Size Masculina\n\nCamisa lycra de estilo moderno, com modelagem slim e corte reto, proporcionando ótimo caimento e visual jovem. Confeccionada em tecido encorpado, macio e confortável.\n\nPossui proteção UV 50+, sendo ideal para esportes e atividades ao ar livre com exposição ao sol. A composição em poliamida com elastano garante elasticidade, mobilidade e secagem rápida, mantendo o conforto térmico durante o uso.\n\nIndicada para náutica, corrida, academia, bike e atividades ao ar livre.",
+    descricao: "Camisa Lycra Manga Longa com Proteção UV 50+ Slim Plus Size Masculina...",
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_919335-MLB105826401086_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_733610-MLB105824401230_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_629102-MLB106679797323_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp"
-    ],
-    variacoes: { cores: ["Preta"], tamanhos: ["Plus S (XG)"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6219140610-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size-_JM"
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_919335-MLB105826401086_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_733610-MLB105824401230_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_629102-MLB106679797323_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp"],
+    variacoes: { Cores: ["Preta"], Tamanhos: ["Plus S (XG)"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 8,
     nome: "Johnn Brava Lycra Proteção Uv Capuz Preta",
-    categoria: "Acessórios",
+    categoria: ["Roupas"],
     preco: "R$ 358,90",
-    descricao: "Lycra com capuz masculina, moderna e sofisticada, com corte slim reto e alinhado, garantindo excelente caimento e conforto. Confeccionada em tecido encorpado, macio e tecnológico, ideal para atividades com exposição ao sol como náutica, corrida, academia e bike.\n\nPossui proteção UV 50+, oferecendo segurança contra os raios solares. Sua composição em poliamida com elastano proporciona secagem rápida, mobilidade e conforto térmico, mantendo a temperatura corporal equilibrada durante o uso.",
+    descricao: "Lycra com capuz masculina, moderna e sofisticada...",
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_974026-MLB106861709287_022026-F-lycra-proteco-uv-capuz-preta.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_785891-MLB106234568224_022026-F-lycra-proteco-uv-capuz-preta.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_986011-MLB106234568368_022026-F-lycra-proteco-uv-capuz-preta.webp"
-    ],
-    variacoes: { cores: ["Preto"], tamanhos: ["P", "GG", "XG"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-4467503217-lycra-proteco-uv-capuz-preta-_JM"
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_974026-MLB106861709287_022026-F-lycra-proteco-uv-capuz-preta.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_785891-MLB106234568224_022026-F-lycra-proteco-uv-capuz-preta.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_986011-MLB106234568368_022026-F-lycra-proteco-uv-capuz-preta.webp"],
+    variacoes: { Cores: ["Preto"], Tamanhos: ["P", "GG", "XG"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 9,
     nome: "Colete Salva Vidas Prolife Hydro Citrus",
-    categoria: "Coletes",
+    categoria: ["Coletes"],
     preco: "R$ 529,00",
-    descricao: "O Colete Salva-Vidas Hydro Citrus Prolife foi desenvolvido especialmente para a prática de atividades aquáticas e náuticas através do seu design tecnológico totalmente anatômico e focado no desempenho. É tão confortável que nem parece um colete!\n\nComo se não bastasse, ao contrário de outros modelos de coletes slim, o Hydro é Homologado pela Marinha do Brasil, garantindo a segurança e resistência habituais dos produtos Prolife.",
-    fichaTecnica: { "Marca": "Prolife", "Modelo": "Hydro Citrus", "Número de homologação da Marinha": "211.001/2020" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_979856-MLB101904931823_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_974368-MLB101904454565_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_990489-MLB101404144806_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp"
+    descricao: "O Colete Salva-Vidas Hydro Citrus Prolife foi desenvolvido especialmente para a prática de atividades aquáticas e náuticas...",
+    fichaTecnica: { "Marca": "Prolife", "Modelo": "Hydro Citrus" },
+    imagens: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_979856-MLB101904931823_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp", 
+      "https://http2.mlstatic.com/D_NQ_NP_2X_974368-MLB101904454565_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp", 
+      "https://http2.mlstatic.com/D_NQ_NP_2X_990489-MLB101404144806_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp"
     ],
-    variacoes: { cores: ["Azul-Turquesa", "Grafite", "Ice"], tamanhos: ["M", "EG", "G1"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6079949538-colete-salva-vidas-prolife-hydro-citrus-_JM?attributes=LIFE_JACKET_SIZE%3ATQ%3D%3D&quantity=1&picker=true"
+    variacoes: { Cores: ["Azul-Turquesa", "Grafite", "Ice"], Tamanhos: ["M", "EG", "G1"] },
+
+    tamanhosPorCor: {
+      "Azul-Turquesa": ["G1",],
+      "Grafite": ["EG",],
+      "Ice": ["M"]
+    },
+    imagensPorCor: {
+      "Azul-Turquesa": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_974368-MLB101904454565_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_829792-MLB101404145728_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_881242-MLB101904553459_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp"
+      ],
+      "Grafite": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_990489-MLB101404144806_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_661895-MLB101403955410_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_896275-MLB101904552449_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp"
+      ],
+      "Ice": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_979856-MLB101904931823_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_603899-MLB101904554057_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_684983-MLB101402991014_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp"
+      ]
+    },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 10,
     nome: "Colete Salva Vidas ProLife N1",
-    categoria: "Coletes",
+    categoria: ["Coletes"],
     preco: "R$ 199,00",
-    descricao: "Os Coletes Salva-Vidas Classe V Prolife são homologados pela Marinha do Brasil, garantindo a sua proteção por completo! Para os fanáticos por água que buscam estilo, conforto e economia, o Colete Salva-Vidas Homologado N1 100% Nylon traz a clara escolha vencedora. Como se não bastasse, seu design exclusivo e altamente tecnológico proporciona ao usuário experiências fantásticas em qualquer atividade náutica ou aquática.",
-    fichaTecnica: { "Marca": "Prolife", "Modelo": "N1", "Número de homologação da Marinha": "211.001/2020" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_946647-MLB101407927500_122025-F-colete-salva-vidas-prolife-n1.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_841325-MLB101407977182_122025-F-colete-salva-vidas-prolife-n1.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_919423-MLB101407927498_122025-F-colete-salva-vidas-prolife-n1.webp"
-    ],
-    variacoes: { cores: ["Preto"], tamanhos: ["G1", "G2"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6079955642-colete-salva-vidas-prolife-n1-_JM"
+    descricao: "Os Coletes Salva-Vidas Classe V Prolife são homologados pela Marinha do Brasil...",
+    fichaTecnica: { "Marca": "Prolife", "Modelo": "N1" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_946647-MLB101407927500_122025-F-colete-salva-vidas-prolife-n1.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_841325-MLB101407977182_122025-F-colete-salva-vidas-prolife-n1.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_919423-MLB101407927498_122025-F-colete-salva-vidas-prolife-n1.webp"],
+    variacoes: { Cores: ["Preto"], Tamanhos: ["G1", "G2"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 11,
     nome: "Johnn Brava Camisa Lycra Manga Longa Com Proteção Uv Preta Masculina",
-    categoria: "Acessórios",
+    categoria: ["Roupas"],
     preco: "R$ 368,99",
-    descricao: "Lycra Slim Reta – Estilo Moderno e Conforto\n\nLycra com corte slim reto e estilo moderno, trazendo um toque maori ao visual. Ideal para quem busca um look jovem, alinhado e descolado.\n\nFeita em tecido encorpado e macio, proporciona caimento confortável e liberdade de movimento. Perfeita para atividades como náutica, corrida, academia e bike, especialmente em exposição ao sol.",
+    descricao: "Lycra Slim Reta – Estilo Moderno e Conforto...",
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_652064-MLB106061157930_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_849725-MLB106432362597_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_997917-MLB105823106960_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp"
-    ],
-    variacoes: { cores: ["Preta"], tamanhos: ["P", "M"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6219947634-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina-_JM"
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_652064-MLB106061157930_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_849725-MLB106432362597_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_997917-MLB105823106960_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp"],
+    variacoes: { Cores: ["Preta"], Tamanhos: ["P", "M"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 12,
     nome: "Johnn Brava Camisa Lycra Manga Longa Com Proteção Uv Azul Masculina",
-    categoria: "Acessórios",
+    categoria: ["Roupas"],
     preco: "R$ 289,99",
-    descricao: "Eleve seu visual com esta Lycra de corte slim, que une a sofisticação do estilo moderno a um caimento impecável e alinhado. Desenvolvida para quem busca um look jovem e descolado, ela é fabricada com tecido tecnológico de Poliamida e Elastano, garantindo um toque macio, secagem ultra rápida e total liberdade de movimento.\n\nIdeal para náutica, corrida, bike e academia, o modelo conta com proteção UV 50+ para garantir sua segurança sob o sol.",
+    descricao: "Eleve seu visual com esta Lycra de corte slim...",
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_856331-MLB106060094178_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_643257-MLB106060124544_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_989022-MLB106060124258_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp"
-    ],
-    variacoes: { cores: ["Azul"], tamanhos: ["GG", "XG"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6231075168-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina-_JM"
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_856331-MLB106060094178_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_643257-MLB106060124544_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_989022-MLB106060124258_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp"],
+    variacoes: { Cores: ["Azul"], Tamanhos: ["GG", "XG"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 13,
     nome: "Lycra Uc Com Capuz E Mascara Cinza Masculina",
-    categoria: "Acessórios",
+    categoria: ["Roupas"],
     preco: "R$ 358,90",
-    descricao: "Eleve seu visual com esta Lycra de corte slim, que une a sofisticação do estilo moderno a um caimento impecável e alinhado. Desenvolvida para quem busca um look jovem e descolado, ela é fabricada com tecido tecnológico de Poliamida e Elastano, garantindo um toque macio, secagem ultra rápida e total liberdade de movimento.\n\nIdeal para náutica, corrida, bike e academia, o modelo conta com proteção UV 50+ para garantir sua segurança sob o sol.",
+    descricao: "A Lycra Masculina com Capuz e Máscara é a definição de estilo moderno e funcional...",
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
-    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_972556-MLB106680448959_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_703081-MLB106680507827_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp",
-              "https://http2.mlstatic.com/D_NQ_NP_2X_959574-MLB106679854927_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp"
-    ],
-    variacoes: { cores: ["Cinza"], tamanhos: ["M", "G"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "A Lycra Masculina com Capuz e Máscara é a definição de estilo moderno e funcional. Possui corte slim reto, alinhado ao corpo, garantindo um visual jovem e sofisticado sem abrir mão do conforto. Confeccionada em tecido encorpado, com toque macio, oferece excelente caimento e liberdade de movimentos.\n\nDesenvolvida com tecnologia UV 50+ Protection, é ideal para atividades com exposição ao sol, como náutica, corrida, academia e ciclismo."
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_972556-MLB106680448959_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_703081-MLB106680507827_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_959574-MLB106679854927_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp"],
+    variacoes: { Cores: ["Cinza"], Tamanhos: ["M", "G"] },
+    linkwhatsapp: "https://wa.me/5511999999999",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
     id: 14,
-    nome: "Produto 14 - Nome Aqui",
+    nome: "Kit Infantil De Mascara E Snorkel Bubbles Em Silicone Seasub Cor Azul",
     categoria: "Acessórios",
-    preco: "R$ 0,00",
-    descricao: "Escreva a descrição do produto 14 aqui.",
-    fichaTecnica: { "Código": "014", "Marca": "Sua Marca" },
-    imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+14"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    preco: "R$ 249,99",
+    descricao: "- Diversão e Conforto sob a Água: Kit Máscara e Snorkel SeaSub Bubbles\nTransforme a diversão na piscina ou no mar em uma verdadeira exploração! O Kit Bubbles da SeaSub é referência em qualidade, projetado especificamente para a anatomia das crianças, garantindo que nada atrapalhe a visão do mundo subaquático.\n\n- Por que escolher o Kit SeaSub Bubbles?\nConforto Superior (Silicone): Ao contrário dos modelos comuns de plástico/PVC, este kit é feito em Silicone, que é muito mais macio, não machuca o rosto e oferece uma vedação perfeita para não entrar água.\n\nHipoalergênico: O silicone é um material inerte e seguro, ideal para a pele sensível das crianças, evitando irritações.\n\nVisão Cristalina: Lentes de policarbonato de alta resistência que oferecem excelente visibilidade e segurança contra impactos.",
+    fichaTecnica: { "Marca": "Seasub", "Idade": "Crianças" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_721736-MLA99535755400_122025-F-kit-infantil-mascara-e-snorkel-bubbles-em-silicone-cor-azul.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_806677-MLB107519713295_022026-F-kit-infantil-mascara-e-snorkel-bubbles-em-silicone-cor-azul.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_768169-MLA93509659541_092025-F-kit-infantil-mascara-e-snorkel-bubbles-em-silicone-cor-azul.webp"
+    ],
+    variacoes: { Cores: ["Azul"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
-    linkMercadoLivre: "https://mercadolivre.com.br"
+    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-4482558363-kit-infantil-mascara-e-snorkel-bubbles-em-silicone-cor-azul-_JM"
   },
   {
     id: 15,
-    nome: "Produto 15 - Nome Aqui",
-    categoria: "Acessórios",
-    preco: "R$ 0,00",
-    descricao: "Escreva a descrição do produto 15 aqui.",
-    fichaTecnica: { "Código": "015", "Marca": "Sua Marca" },
+    nome: "Colete Salva Vidas Pet Ativa Nautica Aventura Azul Claro",
+    categoria: "Coletes",
+    preco: "R$ 89,99",
+    descricao: "🐾Segurança e Estilo: Colete Salva-Vidas Pet Ativa\nProteja seu melhor amigo em todas as aventuras na água! Seja na piscina, no mar ou em passeios de barco e jet ski, o Colete Ativa Pet garante flutuabilidade e total segurança para o seu cão.\n\n✅ Por que este colete é indispensável?\nAlça de Resgate: Possui uma alça reforçada no dorso para você içar ou guiar o seu pet rapidamente se necessário.\n\nSegurança Reforçada: Fechos de engate rápido e ajustes precisos no pescoço e barriga.\n\nAlta Visibilidade: Cores vibrantes e fitas refletivas que facilitam a localização do pet, mesmo à distância ou em baixa luz.\n\nConforto Premium: Design anatômico que não limita os movimentos das patas, permitindo que ele nade naturalmente.",
+    fichaTecnica: { "Marca": "Aventura Naútica", "Modelo": "Colete Salva Vidas Aventura" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+15"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Rosa", "Azul-Claro"], Tamanhos: ["P", "PP",] },
+
+    tamanhosPorCor: {
+      "Rosa": ["P", "PP",],
+      "Azul-Claro": ["P",],
+    },
+    imagensPorCor: {
+      "Rosa": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_675711-MLB106842436230_022026-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_863752-MLB106841201210_022026-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_823627-MLA81873222180_012025-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp"
+      ],
+      "Azul-Claro": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_646980-MLA99901846087_112025-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_745323-MLB107515699017_022026-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_823627-MLA81873222180_012025-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp"
+      ],
+      },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
   {
     id: 16,
-    nome: "Produto 16 - Nome Aqui",
-    categoria: "Acessórios",
-    preco: "R$ 0,00",
-    descricao: "Escreva a descrição do produto 16 aqui.",
-    fichaTecnica: { "Código": "016", "Marca": "Sua Marca" },
+    nome: "Bóia Colete Salva Vidas Homologado Infantil Prolife Até 25kg",
+    categoria: "Coletes",
+    preco: "R$ 89,99",
+    descricao: "Segurança e Diversão: Colete Salva-Vidas Infantil Homologado\nDê aos seus filhos a liberdade de brincar na água com a proteção que só um produto Homologado pela Marinha do Brasil pode oferecer. O Colete Prolife Kids une segurança máxima a um design lúdico que as crianças adoram usar.\n\nPor que escolher o Colete Prolife Kids?\nPaz de Espírito para os Pais: Diferente das boias infláveis, este colete não fura e possui um sistema que impede que ele saia dos braços da criança, garantindo flutuabilidade constante.\n\nConforto Incomparável: O design anatômico e ajustável permite que os pequenos nadem, corram e brinquem sem restrições de movimento.\n\nDurabilidade Extrema: Fabricado com material resistente a perfurações e cores vibrantes que facilitam a visualização da criança na água.\n\nDiferenciais que Fazem a Diferença:\nCertificação Oficial: Produto testado e aprovado pela Marinha do Brasil.\n\nSistema Anti-Remoção: Alça ajustável nas costas com fecho de segurança que a criança não consegue abrir sozinha.\n\nAlta Flutuabilidade: Suporta com segurança crianças de até 25kg (geralmente entre 1 e 7 anos).\n\nVersatilidade: Perfeito para uso em piscinas, praias, lagos e embarcações.\n\nDicas para Uso:\nAjuste: Para eficácia total, certifique-se de que a alça traseira esteja bem ajustada ao corpo da criança.\n\nSupervisão: O colete é um auxiliar de flutuação; nunca deixe a criança sem a supervisão de um adulto.\n\nCuidados: Após um dia de diversão, enxágue com água doce para remover o cloro ou sal e seque à sombra para preservar as fibras e a cor.\n\nGarantia do vendedor: 7 dias",
+    fichaTecnica: { "Marca": "Prolife", "Modelo": "Infantil" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+16"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Flamingo", "Bella", "Crazy Shark", "Crocoloco", "Dinos", "Ted Sideral", "Unicórnio"], Tamanhos: ["Único"] },
+
+    imagensPorCor: {
+      "Flamingo": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_904667-MLA99404958082_112025-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_624894-MLA96314786482_102025-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_954125-MLA106842812272_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ],
+      "Bella": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_703960-MLB107518560631_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_821201-MLB107518560649_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_909675-MLB107517380325_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ],
+      "Crazy Shark": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_951107-MLB106842252470_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_603363-MLB106844056698_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_764122-MLA107518893059_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ],
+      "Crocoloco": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_814707-MLB107517349827_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_854123-MLB106842451622_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_809278-MLB106843400986_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ],
+      "Dinos": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_716586-MLB107517681979_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_959848-MLB107517474615_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_821719-MLA106843565054_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ],
+      "Ted Sideral": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_607488-MLB106842458062_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_892045-MLB106844085822_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_811406-MLA107519039277_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ],
+      "Unicórnio": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_879423-MLB106842423856_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_977960-MLB106843373788_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_756279-MLA106843592100_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
+      ]
+    },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -239,7 +284,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 17 aqui.",
     fichaTecnica: { "Código": "017", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+17"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -251,7 +296,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 18 aqui.",
     fichaTecnica: { "Código": "018", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+18"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -263,7 +308,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 19 aqui.",
     fichaTecnica: { "Código": "019", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+19"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -275,7 +320,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 20 aqui.",
     fichaTecnica: { "Código": "020", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+20"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -287,7 +332,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 21 aqui.",
     fichaTecnica: { "Código": "021", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+21"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -299,7 +344,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 22 aqui.",
     fichaTecnica: { "Código": "022", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+22"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -311,7 +356,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 23 aqui.",
     fichaTecnica: { "Código": "023", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+23"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -323,7 +368,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 24 aqui.",
     fichaTecnica: { "Código": "024", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+24"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -335,7 +380,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 25 aqui.",
     fichaTecnica: { "Código": "025", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+25"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -347,7 +392,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 26 aqui.",
     fichaTecnica: { "Código": "026", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+26"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -359,7 +404,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 27 aqui.",
     fichaTecnica: { "Código": "027", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+27"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -371,7 +416,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 28 aqui.",
     fichaTecnica: { "Código": "028", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+28"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -383,7 +428,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 29 aqui.",
     fichaTecnica: { "Código": "029", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+29"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -395,7 +440,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 30 aqui.",
     fichaTecnica: { "Código": "030", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+30"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -407,7 +452,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 31 aqui.",
     fichaTecnica: { "Código": "031", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+31"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -419,7 +464,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 32 aqui.",
     fichaTecnica: { "Código": "032", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+32"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -431,7 +476,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 33 aqui.",
     fichaTecnica: { "Código": "033", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+33"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -443,7 +488,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 34 aqui.",
     fichaTecnica: { "Código": "034", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+34"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -455,7 +500,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 35 aqui.",
     fichaTecnica: { "Código": "035", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+35"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -467,7 +512,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 36 aqui.",
     fichaTecnica: { "Código": "036", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+36"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -479,7 +524,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 37 aqui.",
     fichaTecnica: { "Código": "037", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+37"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -491,7 +536,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 38 aqui.",
     fichaTecnica: { "Código": "038", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+38"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -503,7 +548,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 39 aqui.",
     fichaTecnica: { "Código": "039", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+39"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -515,7 +560,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 40 aqui.",
     fichaTecnica: { "Código": "040", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+40"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -527,7 +572,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 41 aqui.",
     fichaTecnica: { "Código": "041", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+41"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -539,7 +584,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 42 aqui.",
     fichaTecnica: { "Código": "042", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+42"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -551,7 +596,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 43 aqui.",
     fichaTecnica: { "Código": "043", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+43"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -563,7 +608,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 44 aqui.",
     fichaTecnica: { "Código": "044", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+44"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -575,7 +620,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 45 aqui.",
     fichaTecnica: { "Código": "045", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+45"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -587,7 +632,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 46 aqui.",
     fichaTecnica: { "Código": "046", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+46"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -599,7 +644,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 47 aqui.",
     fichaTecnica: { "Código": "047", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+47"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -611,7 +656,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 48 aqui.",
     fichaTecnica: { "Código": "048", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+48"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -623,7 +668,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 49 aqui.",
     fichaTecnica: { "Código": "049", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+49"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -635,7 +680,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 50 aqui.",
     fichaTecnica: { "Código": "050", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+50"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -647,7 +692,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 51 aqui.",
     fichaTecnica: { "Código": "051", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+51"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
@@ -659,7 +704,7 @@ export const produtos = [
     descricao: "Escreva a descrição do produto 52 aqui.",
     fichaTecnica: { "Código": "052", "Marca": "Sua Marca" },
     imagens: ["https://via.placeholder.com/600x600?text=Foto+Prod+52"],
-    variacoes: { cores: ["Cor Exemplo"], tamanhos: ["Único"] },
+    variacoes: { Cores: ["Cor Exemplo"], Tamanhos: ["Único"] },
     linkWhatsapp: "https://wa.me/5511999999999",
     linkMercadoLivre: "https://mercadolivre.com.br"
   }

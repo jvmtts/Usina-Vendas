@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { produtos } from '../data/produtos';
+import { FaArrowLeft, FaWhatsapp, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-export default function DetalhesProduto() {
+export default function DetalhesProduto({ produtos = [] }) {
   const { id } = useParams();
   const navigate = useNavigate();
   
@@ -12,99 +12,283 @@ export default function DetalhesProduto() {
 
   const produto = produtos.find(p => p.id === parseInt(id));
 
-  if (!produto) return <h2>Produto não encontrado</h2>;
+  const [imagemAtiva, setImagemAtiva] = useState(0);
+  const [selecoes, setSelecoes] = useState({});
+  const [modalZoomAberto, setModalZoomAberto] = useState(false);
+  const [zoomInterno, setZoomInterno] = useState(false);
+  const [posicaoMouse, setPosicaoMouse] = useState({ x: 0, y: 0 });
 
-  const [cor, setCor] = useState(produto.variacoes?.cores[0] || '');
-  const [tamanho, setTamanho] = useState(produto.variacoes?.tamanhos[0] || '');
-  const [imagemAtiva, setImagemAtiva] = useState(produto.imagens[0]);
+  let listaVariacoes = [];
+  if (produto?.variacoes) {
+    if (Array.isArray(produto.variacoes)) {
+      listaVariacoes = produto.variacoes;
+    } else if (typeof produto.variacoes === 'object') {
+      listaVariacoes = Object.entries(produto.variacoes).map(([chave, valores]) => ({
+        nome: chave,
+        opcoes: Array.isArray(valores) ? valores : [valores]
+      }));
+    }
+  }
+
+  const nomeVariacaoCor = listaVariacoes.find(v => v.nome.toLowerCase().includes('cor'))?.nome;
+  const nomeVariacaoTamanho = listaVariacoes.find(v => v.nome.toLowerCase().includes('tamanho'))?.nome;
+
+  const corSelecionada = nomeVariacaoCor 
+    ? (selecoes[nomeVariacaoCor] || listaVariacoes.find(v => v.nome === nomeVariacaoCor).opcoes[0]) 
+    : null;
+
+  const listaVariacoesExibidas = listaVariacoes.map(variacao => {
+    if (variacao.nome === nomeVariacaoTamanho && corSelecionada && produto?.tamanhosPorCor?.[corSelecionada]) {
+      return { ...variacao, opcoes: produto.tamanhosPorCor[corSelecionada] };
+    }
+    return variacao;
+  });
+
+  useEffect(() => {
+    if (nomeVariacaoTamanho && corSelecionada && produto?.tamanhosPorCor?.[corSelecionada]) {
+      const tamanhosValidos = produto.tamanhosPorCor[corSelecionada];
+      const tamanhoAtual = selecoes[nomeVariacaoTamanho] || listaVariacoes.find(v => v.nome === nomeVariacaoTamanho)?.opcoes[0];
+
+      if (!tamanhosValidos.includes(tamanhoAtual)) {
+        setSelecoes(prev => ({ ...prev, [nomeVariacaoTamanho]: tamanhosValidos[0] }));
+      }
+    }
+  }, [corSelecionada, id, nomeVariacaoTamanho, produto, selecoes, listaVariacoes]);
+
+  let imagensExibidas = produto?.imagens?.length > 0 
+    ? produto.imagens 
+    : ['https://via.placeholder.com/600x600?text=Sem+Foto'];
+
+  if (corSelecionada && produto?.imagensPorCor && produto.imagensPorCor[corSelecionada]) {
+    imagensExibidas = produto.imagensPorCor[corSelecionada];
+  }
+
+  useEffect(() => {
+    setImagemAtiva(0);
+  }, [corSelecionada]); 
+
+  if (!produto) {
+    return (
+      <div className="w-[92%] max-w-[1800px] mx-auto py-10 text-center">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Produto não encontrado</h2>
+        <button 
+          onClick={() => navigate('/')}
+          className="bg-transparent text-[#ff7b00] border-2 border-[#ff7b00] py-3 px-6 rounded-full font-bold transition-colors hover:bg-[#ff7b00] hover:text-white cursor-pointer"
+        >
+          Voltar para a vitrine
+        </button>
+      </div>
+    );
+  }
+
+  const formatarPreco = (preco) => {
+    if (typeof preco === 'number') {
+      return preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+    return preco || 'R$ 0,00';
+  };
+
+  const handleSelecionarOpcao = (nomeVariacao, opcao) => {
+    setSelecoes(prev => ({ ...prev, [nomeVariacao]: opcao }));
+  };
+
+  const handleMouseMove = (e) => {
+    if (!zoomInterno) return;
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.pageX - left) / width) * 100;
+    const y = ((e.pageY - top) / height) * 100;
+    setPosicaoMouse({ x, y });
+  };
+
+  const irParaProxima = (e) => {
+    e.stopPropagation();
+    setZoomInterno(false);
+    setImagemAtiva((prev) => (prev + 1) % imagensExibidas.length);
+  };
+
+  const irParaAnterior = (e) => {
+    e.stopPropagation();
+    setZoomInterno(false);
+    setImagemAtiva((prev) => (prev - 1 + imagensExibidas.length) % imagensExibidas.length);
+  };
+
+  const urlWhatsappBase = produto.linkwhatsapp || produto.linkWhatsapp || "https://wa.me/5511999999999";
+  const tamanhoSelecionadoURL = selecoes[nomeVariacaoTamanho] || listaVariacoesExibidas.find(v => v.nome === nomeVariacaoTamanho)?.opcoes[0] || '';
+  const textoCoresTamanho = `${corSelecionada ? ` na cor ${corSelecionada}` : ''}${tamanhoSelecionadoURL && tamanhoSelecionadoURL !== 'Único' ? `, tamanho ${tamanhoSelecionadoURL}` : ''}`;
+  const linkFinalWhatsapp = `${urlWhatsappBase}${urlWhatsappBase.includes('?') ? '&' : '?'}text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${produto.nome}${textoCoresTamanho}`)}`;
+  const linkFinalML = produto.linkMercadoLivre || "https://www.mercadolivre.com.br";
 
   return (
-    <div className="pagina-branca">
-      <button className="btn-voltar" onClick={() => navigate('/')}>
-        ← Voltar para Vitrine
-      </button>
-      
-      <div className="detalhes-layout">
-        <div className="galeria-container">
-          <div className="galeria-miniaturas">
-            {produto.imagens.map((img, index) => (
-              <img 
-                key={index}
-                src={img} 
-                alt={`${produto.nome} ângulo ${index + 1}`}
-                className={`miniatura ${imagemAtiva === img ? 'ativa' : ''}`}
-                onMouseEnter={() => setImagemAtiva(img)}
-                onClick={() => setImagemAtiva(img)}
-              />
-            ))}
+    <>
+      <style>{`
+        @keyframes fadeUpAnim {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animar-entrada {
+          animation: fadeUpAnim 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeInModal {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .animar-modal {
+          animation: fadeInModal 0.3s ease-out forwards;
+        }
+        .no-select {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+      `}</style>
+
+      <div className="w-[92%] max-w-[1800px] mx-auto py-10 bg-white animar-entrada no-select">
+        <button 
+          onClick={() => navigate('/')} 
+          className="flex items-center gap-2 text-[#ff7b00] text-sm md:text-base font-bold mb-10 hover:-translate-x-2 transition-transform duration-300 bg-transparent border-none cursor-pointer outline-none p-0"
+        >
+          <FaArrowLeft /> Voltar para Vitrine
+        </button>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="flex flex-col-reverse md:flex-row gap-5 w-full">
+            <div className="flex flex-row md:flex-col gap-3 w-full md:w-[120px] overflow-x-auto md:overflow-y-auto max-h-[550px] p-1 scrollbar-hide">
+              {imagensExibidas.map((img, index) => (
+                <div
+                  key={index}
+                  className={`shrink-0 w-[70px] md:w-full aspect-square rounded-xl cursor-pointer bg-white border-2 flex justify-center items-center overflow-hidden transition-all duration-200 box-border ${
+                    imagemAtiva === index ? 'border-[#ff7b00] opacity-100 shadow-sm' : 'border-transparent opacity-60 hover:opacity-100 hover:border-gray-200' 
+                  }`}
+                  onMouseEnter={() => setImagemAtiva(index)}
+                  onClick={() => setImagemAtiva(index)}
+                >
+                  <img src={img} alt={`${produto.nome} - miniatura ${index + 1}`} className="w-full h-full object-contain p-1" />
+                </div>
+              ))}
+            </div>
+            
+            <div 
+              className="grow w-full aspect-square rounded-2xl border border-gray-100 bg-white flex justify-center items-center overflow-hidden shadow-sm cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]"
+              onClick={() => setModalZoomAberto(true)}
+            >
+              <img key={imagensExibidas[imagemAtiva]} src={imagensExibidas[imagemAtiva]} alt={produto.nome} className="w-full h-full object-contain p-2 animate-[fadeInModal_0.3s_ease-out]" />
+            </div>
           </div>
-          <div className="galeria-destaque">
-            <img src={imagemAtiva} alt={produto.nome} />
+
+          <div className="flex flex-col">
+            <h1 className="text-2xl md:text-3xl lg:text-[2rem] font-extrabold text-gray-900 mb-2 tracking-tight leading-tight">
+              {produto.nome}
+            </h1>
+            
+            <p className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-gray-900 mt-3 mb-8 tracking-tight">
+              {formatarPreco(produto.preco)}
+            </p>
+
+            {listaVariacoesExibidas.length > 0 && (
+              <div className="flex flex-col gap-6 mb-10">
+                {listaVariacoesExibidas.map((variacao, index) => {
+                  const selecaoAtual = selecoes[variacao.nome] || variacao.opcoes[0];
+                  return (
+                    <div key={index}>
+                      <p className="text-base md:text-lg text-gray-800 mb-3">
+                        <span className="font-bold">{variacao.nome}:</span> {selecaoAtual}
+                      </p>
+                      <div className="flex gap-3 flex-wrap">
+                        {variacao.opcoes.map((opcao, idx) => {
+                          const isAtivo = selecaoAtual === opcao;
+                          return (
+                            <button
+                              key={idx}
+                              className={`py-2 px-5 md:px-6 rounded-lg cursor-pointer transition-all duration-200 text-sm md:text-base font-bold outline-none shadow-sm active:scale-95 ${
+                                isAtivo ? 'border-2 border-[#ff7b00] text-[#ff7b00] bg-[#fff5eb]' : 'border border-gray-300 text-gray-600 bg-white hover:border-[#ff7b00] hover:text-[#ff7b00] hover:bg-gray-50'
+                              }`}
+                              onClick={() => handleSelecionarOpcao(variacao.nome, opcao)}
+                            >
+                              {opcao}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            <div className="mt-2 flex flex-col gap-4 w-full md:w-[90%]">
+              <a href={linkFinalWhatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-[#1ebd5c] hover:bg-[#18a24e] text-white py-3 md:py-[14px] px-6 rounded-full font-bold text-[1.05rem] cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 no-underline">
+                <FaWhatsapp className="text-[1.5rem]" /> Comprar pelo WhatsApp
+              </a>
+              <a href={linkFinalML} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-transparent text-[#ff7b00] border-2 border-[#ff7b00] py-3 md:py-[12px] px-6 rounded-full font-bold text-[1.05rem] cursor-pointer shadow-sm hover:bg-[#fff5eb] hover:shadow-md hover:-translate-y-1 transition-all duration-300 no-underline">
+                <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/logo__small@2x.png" alt="Mercado Livre" className="h-7 md:h-8 w-auto object-contain" />
+                Comprar no Mercado Livre
+              </a>
+            </div>
           </div>
         </div>
-        
-        <div className="detalhes-info">
-          <h2>{produto.nome}</h2>
-          <p className="preco-grande">{produto.preco}</p>
 
-          <div className="variacoes-box">
-            <p><strong>Cor:</strong> {cor}</p>
-            <div className="btn-group">
-              {produto.variacoes?.cores.map(c => (
-                <button key={c} className={`btn-opcao ${cor === c ? 'ativo' : ''}`} onClick={() => setCor(c)}>{c}</button>
-              ))}
-            </div>
-
-            <p><strong>Tamanho:</strong> {tamanho}</p>
-            <div className="btn-group">
-              {produto.variacoes?.tamanhos.map(t => (
-                <button key={t} className={`btn-opcao ${tamanho === t ? 'ativo' : ''}`} onClick={() => setTamanho(t)}>{t}</button>
-              ))}
-            </div>
-          </div>
-
-          <div className="botoes-compra">
-            <a href={produto.linkWhatsapp} target="_blank" rel="noreferrer" className="btn-verde btn-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-              </svg>
-              Comprar pelo WhatsApp
-            </a>
-            <a href={produto.linkMercadoLivre} target="_blank" rel="noreferrer" className="btn-contorno btn-full">
-              <img 
-                src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/logo__small@2x.png" 
-                alt="Mercado Livre" 
-                width="40" 
-                style={{ objectFit: 'contain' }}
-              />
-              Comprar no Mercado Livre
-            </a>
-          </div>
+        <div className="mt-20 pt-12 border-t border-gray-100">
+            <h3 className="text-[1.5rem] md:text-[1.8rem] font-extrabold text-[#ff7b00] mb-6 tracking-wide uppercase">Descrição do Produto</h3>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line mb-14">{produto.descricao || 'Nenhuma descrição disponível.'}</p>
+            {produto?.fichaTecnica && Object.keys(produto.fichaTecnica).length > 0 && (
+                <>
+                <h3 className="text-[1.5rem] md:text-[1.8rem] font-extrabold text-[#ff7b00] mb-6 tracking-wide uppercase">Especificações Técnicas</h3>
+                <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                    <table className="w-full border-collapse">
+                    <tbody>
+                        {Object.entries(produto.fichaTecnica).map(([chave, valor], index) => (
+                        <tr key={index} className="even:bg-gray-50 odd:bg-white border-b border-gray-100 last:border-0 hover:bg-gray-100 transition-colors">
+                            <td className="p-4 md:p-5 font-bold text-gray-800 w-1/3 md:w-1/4 align-top border-r border-gray-100">{chave}</td>
+                            <td className="p-4 md:p-5 text-gray-700 w-2/3 md:w-3/4 leading-relaxed">{valor}</td>
+                        </tr>
+                        ))}
+                    </tbody>
+                    </table>
+                </div>
+                </>
+            )}
         </div>
       </div>
 
-      <div className="secao-extra-produto">
-        <h3 className="titulo-secao">Descrição Geral</h3>
-        <div className="texto-descricao">
-          {produto.descricao}
-        </div>
+      {modalZoomAberto && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xl animar-modal overflow-hidden no-select"
+          onClick={() => { setModalZoomAberto(false); setZoomInterno(false); }}
+        >
+          <button 
+            className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white text-4xl transition-all z-[70] cursor-pointer p-2 outline-none border-none bg-transparent"
+            onClick={() => { setModalZoomAberto(false); setZoomInterno(false); }}
+          >
+            <FaTimes />
+          </button>
 
-        {produto.fichaTecnica && (
-          <>
-            <h3 className="titulo-secao">Ficha técnica</h3>
-            <table className="tabela-ficha">
-              <tbody>
-                {Object.entries(produto.fichaTecnica).map(([chave, valor]) => (
-                  <tr key={chave}>
-                    <td className="coluna-chave">{chave}</td>
-                    <td className="coluna-valor">{valor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </>
-        )}
-      </div>
-    </div>
+          <button className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-5xl md:text-6xl transition-all z-[70] cursor-pointer p-2 outline-none border-none bg-transparent" onClick={irParaAnterior}>
+            <FaChevronLeft />
+          </button>
+
+          <button className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-5xl md:text-6xl transition-all z-[70] cursor-pointer p-2 outline-none border-none bg-transparent" onClick={irParaProxima}>
+            <FaChevronRight />
+          </button>
+
+          <div 
+            className={`relative w-full h-full max-h-[85vh] max-w-[90vw] flex justify-center items-center overflow-hidden transition-all duration-300 p-4 md:p-0 ${zoomInterno ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            onMouseMove={handleMouseMove}
+            onClick={(e) => { e.stopPropagation(); setZoomInterno(!zoomInterno); }}
+          >
+            <img 
+              key={imagensExibidas[imagemAtiva]}
+              src={imagensExibidas[imagemAtiva]} 
+              alt={produto.nome} 
+              className="max-h-full max-w-full object-contain transition-transform duration-200 ease-out pointer-events-none drop-shadow-2xl animate-[fadeInModal_0.3s_ease-out]"
+              style={{
+                transform: zoomInterno ? 'scale(2.5)' : 'scale(1)',
+                transformOrigin: `${posicaoMouse.x}% ${posicaoMouse.y}%`
+              }}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
