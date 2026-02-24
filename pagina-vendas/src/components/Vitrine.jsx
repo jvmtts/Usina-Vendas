@@ -4,7 +4,6 @@ import { FaSearch } from 'react-icons/fa';
 
 export default function Vitrine({ produtos = [], carregando }) {
   const [termoBusca, setTermoBusca] = useState('');
-  // Ordem exata solicitada pelo João
   const categoriasFixas = ['Todos', 'Coletes', 'Âncoras', 'Acessórios', 'Roupas'];
   const [filtroCategoria, setFiltroCategoria] = useState('Todos');
   const [buscaExpandida, setBuscaExpandida] = useState(false);
@@ -23,7 +22,6 @@ export default function Vitrine({ produtos = [], carregando }) {
     const nome = produto.nome || '';
     const matchBusca = nome.toLowerCase().includes(termoBusca.toLowerCase());
     
-    // Suporte para categorias em String única ou Array
     const categoriasDoProduto = Array.isArray(produto.categoria) 
       ? produto.categoria 
       : [produto.categoria];
@@ -84,9 +82,9 @@ export default function Vitrine({ produtos = [], carregando }) {
             className={`bg-transparent border-0 w-11 h-11 rounded-full flex items-center justify-center cursor-pointer shrink-0 transition-colors duration-300 ${
               buscaExpandida ? 'text-[#ff7b00]' : 'text-gray-500'
             }`}
-            onClick={() => {
-              setBuscaExpandida(!buscaExpandida);
-              if (!buscaExpandida) setTimeout(() => inputRef.current?.focus(), 100);
+            onClick={(e) => {
+              e.preventDefault();
+              inputRef.current?.focus();
             }}
             type="button"
           >

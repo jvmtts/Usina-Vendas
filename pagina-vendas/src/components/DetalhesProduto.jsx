@@ -15,9 +15,57 @@ export default function DetalhesProduto({ produtos = [] }) {
   const [imagemAtiva, setImagemAtiva] = useState(0);
   const [selecoes, setSelecoes] = useState({});
   const [modalZoomAberto, setModalZoomAberto] = useState(false);
-  
   const [zoomInterno, setZoomInterno] = useState(false);
   const [posicaoMouse, setPosicaoMouse] = useState({ x: 0, y: 0 });
+
+  let listaVariacoes = [];
+  if (produto?.variacoes) {
+    if (Array.isArray(produto.variacoes)) {
+      listaVariacoes = produto.variacoes;
+    } else if (typeof produto.variacoes === 'object') {
+      listaVariacoes = Object.entries(produto.variacoes).map(([chave, valores]) => ({
+        nome: chave,
+        opcoes: Array.isArray(valores) ? valores : [valores]
+      }));
+    }
+  }
+
+  const nomeVariacaoCor = listaVariacoes.find(v => v.nome.toLowerCase().includes('cor'))?.nome;
+  const nomeVariacaoTamanho = listaVariacoes.find(v => v.nome.toLowerCase().includes('tamanho'))?.nome;
+
+  const corSelecionada = nomeVariacaoCor 
+    ? (selecoes[nomeVariacaoCor] || listaVariacoes.find(v => v.nome === nomeVariacaoCor).opcoes[0]) 
+    : null;
+
+  const listaVariacoesExibidas = listaVariacoes.map(variacao => {
+    if (variacao.nome === nomeVariacaoTamanho && corSelecionada && produto?.tamanhosPorCor?.[corSelecionada]) {
+      return { ...variacao, opcoes: produto.tamanhosPorCor[corSelecionada] };
+    }
+    return variacao;
+  });
+
+  useEffect(() => {
+    if (nomeVariacaoTamanho && corSelecionada && produto?.tamanhosPorCor?.[corSelecionada]) {
+      const tamanhosValidos = produto.tamanhosPorCor[corSelecionada];
+      const tamanhoAtual = selecoes[nomeVariacaoTamanho] || listaVariacoes.find(v => v.nome === nomeVariacaoTamanho)?.opcoes[0];
+
+      if (!tamanhosValidos.includes(tamanhoAtual)) {
+        setSelecoes(prev => ({ ...prev, [nomeVariacaoTamanho]: tamanhosValidos[0] }));
+      }
+    }
+  }, [corSelecionada, id, nomeVariacaoTamanho, produto, selecoes, listaVariacoes]);
+
+  let imagensExibidas = produto?.imagens?.length > 0 
+    ? produto.imagens 
+    : ['https://via.placeholder.com/600x600?text=Sem+Foto'];
+
+  if (corSelecionada && produto?.imagensPorCor && produto.imagensPorCor[corSelecionada]) {
+    imagensExibidas = produto.imagensPorCor[corSelecionada];
+  }
+
+  useEffect(() => {
+    setImagemAtiva(0);
+  }, [corSelecionada]); 
 
   if (!produto) {
     return (
@@ -40,21 +88,6 @@ export default function DetalhesProduto({ produtos = [] }) {
     return preco || 'R$ 0,00';
   };
 
-  const imagensProduto = produto?.imagens?.length > 0 
-    ? produto.imagens 
-    : ['https://via.placeholder.com/600x600?text=Sem+Foto'];
-  let listaVariacoes = [];
-  if (produto.variacoes) {
-    if (Array.isArray(produto.variacoes)) {
-      listaVariacoes = produto.variacoes;
-    } else if (typeof produto.variacoes === 'object') {
-      listaVariacoes = Object.entries(produto.variacoes).map(([chave, valores]) => ({
-        nome: chave,
-        opcoes: Array.isArray(valores) ? valores : [valores]
-      }));
-    }
-  }
-
   const handleSelecionarOpcao = (nomeVariacao, opcao) => {
     setSelecoes(prev => ({ ...prev, [nomeVariacao]: opcao }));
   };
@@ -70,17 +103,19 @@ export default function DetalhesProduto({ produtos = [] }) {
   const irParaProxima = (e) => {
     e.stopPropagation();
     setZoomInterno(false);
-    setImagemAtiva((prev) => (prev + 1) % imagensProduto.length);
+    setImagemAtiva((prev) => (prev + 1) % imagensExibidas.length);
   };
 
   const irParaAnterior = (e) => {
     e.stopPropagation();
     setZoomInterno(false);
-    setImagemAtiva((prev) => (prev - 1 + imagensProduto.length) % imagensProduto.length);
+    setImagemAtiva((prev) => (prev - 1 + imagensExibidas.length) % imagensExibidas.length);
   };
 
   const urlWhatsappBase = produto.linkwhatsapp || produto.linkWhatsapp || "https://wa.me/5511999999999";
-  const linkFinalWhatsapp = `${urlWhatsappBase}${urlWhatsappBase.includes('?') ? '&' : '?'}text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${produto.nome}`)}`;
+  const tamanhoSelecionadoURL = selecoes[nomeVariacaoTamanho] || listaVariacoesExibidas.find(v => v.nome === nomeVariacaoTamanho)?.opcoes[0] || '';
+  const textoCoresTamanho = `${corSelecionada ? ` na cor ${corSelecionada}` : ''}${tamanhoSelecionadoURL && tamanhoSelecionadoURL !== 'Único' ? `, tamanho ${tamanhoSelecionadoURL}` : ''}`;
+  const linkFinalWhatsapp = `${urlWhatsappBase}${urlWhatsappBase.includes('?') ? '&' : '?'}text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${produto.nome}${textoCoresTamanho}`)}`;
   const linkFinalML = produto.linkMercadoLivre || "https://www.mercadolivre.com.br";
 
   return (
@@ -119,7 +154,7 @@ export default function DetalhesProduto({ produtos = [] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="flex flex-col-reverse md:flex-row gap-5 w-full">
             <div className="flex flex-row md:flex-col gap-3 w-full md:w-[120px] overflow-x-auto md:overflow-y-auto max-h-[550px] p-1 scrollbar-hide">
-              {imagensProduto.map((img, index) => (
+              {imagensExibidas.map((img, index) => (
                 <div
                   key={index}
                   className={`shrink-0 w-[70px] md:w-full aspect-square rounded-xl cursor-pointer bg-white border-2 flex justify-center items-center overflow-hidden transition-all duration-200 box-border ${
@@ -137,7 +172,7 @@ export default function DetalhesProduto({ produtos = [] }) {
               className="grow w-full aspect-square rounded-2xl border border-gray-100 bg-white flex justify-center items-center overflow-hidden shadow-sm cursor-zoom-in transition-transform duration-300 hover:scale-[1.01]"
               onClick={() => setModalZoomAberto(true)}
             >
-              <img src={imagensProduto[imagemAtiva]} alt={produto.nome} className="w-full h-full object-contain p-2" />
+              <img key={imagensExibidas[imagemAtiva]} src={imagensExibidas[imagemAtiva]} alt={produto.nome} className="w-full h-full object-contain p-2 animate-[fadeInModal_0.3s_ease-out]" />
             </div>
           </div>
 
@@ -150,9 +185,9 @@ export default function DetalhesProduto({ produtos = [] }) {
               {formatarPreco(produto.preco)}
             </p>
 
-            {listaVariacoes.length > 0 && (
+            {listaVariacoesExibidas.length > 0 && (
               <div className="flex flex-col gap-6 mb-10">
-                {listaVariacoes.map((variacao, index) => {
+                {listaVariacoesExibidas.map((variacao, index) => {
                   const selecaoAtual = selecoes[variacao.nome] || variacao.opcoes[0];
                   return (
                     <div key={index}>
@@ -242,11 +277,12 @@ export default function DetalhesProduto({ produtos = [] }) {
             onClick={(e) => { e.stopPropagation(); setZoomInterno(!zoomInterno); }}
           >
             <img 
-              src={imagensProduto[imagemAtiva]} 
+              key={imagensExibidas[imagemAtiva]}
+              src={imagensExibidas[imagemAtiva]} 
               alt={produto.nome} 
-              className="max-h-full max-w-full object-contain transition-transform duration-200 ease-out pointer-events-none drop-shadow-2xl"
+              className="max-h-full max-w-full object-contain transition-transform duration-200 ease-out pointer-events-none drop-shadow-2xl animate-[fadeInModal_0.3s_ease-out]"
               style={{
-                transform: zoomInterno ? 'scale(1.5)' : 'scale(1)',
+                transform: zoomInterno ? 'scale(2.5)' : 'scale(1)',
                 transformOrigin: `${posicaoMouse.x}% ${posicaoMouse.y}%`
               }}
             />
