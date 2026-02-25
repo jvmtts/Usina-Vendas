@@ -8,7 +8,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Prolife", "Modelo": "Hydro Black Edition", "Número de homologação da Marinha": "211.001/2020" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_953022-MLB101405017190_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_648011-MLB101405036988_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_733218-MLB101405036990_122025-F-colete-salva-vidas-prolife-hydro-black-edition.webp"],
     variacoes: { Cores: ["Preto"], Tamanhos: ["EG"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6079937674-colete-salva-vidas-prolife-hydro-black-edition-_JM"
   },
   {
@@ -32,7 +32,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Johnn Brava", "Material": "Lycra" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_721532-MLB102627476360_122025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_910069-MLB107430878625_022026-F-body-maio-manga-longa-preto-johnn-brava.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_747262-MLB107430878627_022026-F-body-maio-manga-longa-preto-johnn-brava.webp"],
     variacoes: { Cores: ["Preto"], Tamanhos: ["XG"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6282955276-body-maio-manga-longa-preto-johnn-brava-_JM"
   },
   {
@@ -44,7 +44,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Prolife", "Modelo": "Neoprene Protech Extreme" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_635862-MLB101409358622_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_905389-MLB101911101319_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_910651-MLB101910902801_122025-F-colete-salva-vidas-prolife-neoprene-protech-extreme.webp"],
     variacoes: { Cores: ["Selva"], Tamanhos: ["M"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
   {
@@ -56,7 +56,7 @@ export const produtos = [
     fichaTecnica: { "Peso": "1.4kg", "Marca": "Aço inoxidável" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_701051-MLA99853150699_112025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_659977-MLA92473408866_092025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_714235-MLA92473251938_092025-F.webp"],
     variacoes: { Cores: ["Verde"], Tamanhos: ["Único"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://www.mercadolivre.com.br"
   },
   {
@@ -68,7 +68,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Âncora Alfa", "Material": "Náilon" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_907769-MLA100458101268_122025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_929929-MLA100951917755_122025-F.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_612824-MLA100951580161_122025-F.webp"],
     variacoes: { Cores: ["Verde Limão"], Tamanhos: ["Ùnico"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://www.mercadolivre.com.br"
   },
   {
@@ -80,7 +80,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_919335-MLB105826401086_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_733610-MLB105824401230_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_629102-MLB106679797323_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-plus-size.webp"],
     variacoes: { Cores: ["Preta"], Tamanhos: ["Plus S (XG)"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -92,7 +92,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_974026-MLB106861709287_022026-F-lycra-proteco-uv-capuz-preta.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_785891-MLB106234568224_022026-F-lycra-proteco-uv-capuz-preta.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_986011-MLB106234568368_022026-F-lycra-proteco-uv-capuz-preta.webp"],
     variacoes: { Cores: ["Preto"], Tamanhos: ["P", "GG", "XG"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -131,7 +131,7 @@ export const produtos = [
         "https://http2.mlstatic.com/D_NQ_NP_2X_684983-MLB101402991014_122025-F-colete-salva-vidas-prolife-hydro-citrus.webp"
       ]
     },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -143,7 +143,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Prolife", "Modelo": "N1" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_946647-MLB101407927500_122025-F-colete-salva-vidas-prolife-n1.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_841325-MLB101407977182_122025-F-colete-salva-vidas-prolife-n1.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_919423-MLB101407927498_122025-F-colete-salva-vidas-prolife-n1.webp"],
     variacoes: { Cores: ["Preto"], Tamanhos: ["G1", "G2"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -155,7 +155,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_652064-MLB106061157930_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_849725-MLB106432362597_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_997917-MLB105823106960_022026-F-camisa-lycra-manga-longa-com-proteco-uv-preta-masculina.webp"],
     variacoes: { Cores: ["Preta"], Tamanhos: ["P", "M"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -167,7 +167,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_856331-MLB106060094178_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_643257-MLB106060124544_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_989022-MLB106060124258_022026-F-camisa-lycra-manga-longa-com-proteco-uv-azul-masculina.webp"],
     variacoes: { Cores: ["Azul"], Tamanhos: ["GG", "XG"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -179,7 +179,7 @@ export const produtos = [
     fichaTecnica: { "Marca": "Johnn Brava", "Tipo de Manga": "Longa" },
     imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_972556-MLB106680448959_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_703081-MLB106680507827_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp", "https://http2.mlstatic.com/D_NQ_NP_2X_959574-MLB106679854927_022026-F-lycra-uc-com-capuz-e-mascara-cinza-masculina.webp"],
     variacoes: { Cores: ["Cinza"], Tamanhos: ["M", "G"] },
-    linkwhatsapp: "https://wa.me/5511999999999",
+    linkwhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br"
   },
   {
@@ -194,7 +194,7 @@ export const produtos = [
               "https://http2.mlstatic.com/D_NQ_NP_2X_768169-MLA93509659541_092025-F-kit-infantil-mascara-e-snorkel-bubbles-em-silicone-cor-azul.webp"
     ],
     variacoes: { Cores: ["Azul"], Tamanhos: ["Único"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    linkWhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-4482558363-kit-infantil-mascara-e-snorkel-bubbles-em-silicone-cor-azul-_JM"
   },
   {
@@ -223,7 +223,7 @@ export const produtos = [
         "https://http2.mlstatic.com/D_NQ_NP_2X_823627-MLA81873222180_012025-F-colete-salva-vidas-pet-ativa-nautica-aventura-azul-claro.webp"
       ],
       },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    linkWhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
   {
@@ -273,7 +273,7 @@ export const produtos = [
         "https://http2.mlstatic.com/D_NQ_NP_2X_756279-MLA106843592100_022026-F-colete-salva-vidas-homologado-infantil-prolife-ate-25kg.webp"
       ]
     },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    linkWhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://mercadolivre.com.br"
   },
   {
@@ -290,7 +290,7 @@ export const produtos = [
               "https://http2.mlstatic.com/D_NQ_NP_2X_697762-MLB106976226458_022026-F.webp"
     ],
     variacoes: { Cores: ["Preto"], Tamanhos: ["Único"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    linkWhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://www.mercadolivre.com.br/cinta-catraca-amarracao-de-carga-jet-skis-e-motos-800kg-43m/up/MLBU3806780829"
   },
   {
@@ -306,7 +306,97 @@ export const produtos = [
               "https://http2.mlstatic.com/D_NQ_NP_2X_900160-MLA106978628084_022026-F.webp"
     ],
     variacoes: { Cores: ["Verde"], Tamanhos: ["Único"] },
-    linkWhatsapp: "https://wa.me/5511999999999",
+    linkWhatsapp: "https://wa.me/5511964467000",
     linkMercadoLivre: "https://www.mercadolivre.com.br/cinta-de-elevacao-2-toneladas-1-metro-60mm-fator-71-verde/up/MLBU3806860983"
+  },
+  {
+    id: 19,
+    nome: "Kit 4 Cintas de Amarração com Catraca – 800kg | 4,5 Metros",
+    categoria: "Acessórios",
+    preco: "R$ 69,99",
+    descricao: "Este kit completo é a solução definitiva para quem precisa de máxima segurança e praticidade no transporte de cargas. Com quatro unidades de alta resistência, você garante a imobilização total de Jet Skis, motos, quadriciclos ou cargas em carretas e pick-ups, distribuindo o peso e a tensão de forma equilibrada em todos os pontos de ancoragem.\n\n🛡️ Especificações Técnicas\nQuantidade: Kit com 04 Cintas de Amarração.\n\nCapacidade de Carga: Suporta até 800 kg por peça.\n\nComprimento da Fita: 4,5 metros de extensão, ideal para cargas maiores e mais volumosas.\n\nLargura da Fita: 2,5 cm (25mm) para um ajuste firme e seguro.\n\nMecanismo: Catraca de metal reforçada com trava de segurança.\n\n💎 Diferenciais do Produto\nMáxima Resistência: Fitas produzidas em poliéster de alta tenacidade, que suportam sol e chuva sem perder a elasticidade.\n\nProteção Anti-Risco: Ganchos com revestimento especial para evitar danos na pintura do seu veículo ou equipamento.\n\nDurabilidade Náutica: Catracas com tratamento anticorrosivo, perfeitas para o uso em água doce ou salgada.\n\nPraticidade: Sistema de liberação rápida que permite soltar a carga em segundos após o trajeto.",
+    fichaTecnica: { "Marca": "Malaysia Collection", "Comprimento x Largura": "4,5 m x 2,5 cm", "Capacidade": "800kg" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_617932-MLB107663266165_022026-F.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_638137-MLB107663266167_022026-F.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_770390-MLA107665638253_022026-F.webp",
+              "https://http2.mlstatic.com/D_NQ_NP_2X_855801-MLA107666647643_022026-F.webp"
+    ],
+    variacoes: { Cores: ["Laranja"], Tamanhos: ["Único"] },
+    linkWhatsapp: "https://wa.me/5511964467000",
+    linkMercadoLivre: "https://www.mercadolivre.com.br/kit-4-cinta-catraca-amarracao-carga-800kg-46-metros/up/MLBU3816813410"
+  },
+  {
+    id: 20,
+    nome: "Óculos 100% Strata 2 Motocross Azul Escuro Lente Vermelho Espelhado",
+    categoria: "Acessórios",
+    preco: "R$ 299,99",
+    descricao: "Os óculos compartilham muitas das características de desempenho encontradas em óculos mais caros, mas por uma fração do custo. Recentemente 100% redesenhado, o Strata 2 agora vem com um campo de visão maior e uma ponte nasal redesenhada que reduz o embaçamento e aumenta o conforto. O Strata 2 é compatível com todas as lentes e lentes removíveis Accuri 2, Racecraft 2 e Strata 2. O 100% Strata 2 é o seu óculos de uso diário que não o decepcionará.\n\nCaracterísticas:\nCampo de visão vertical 17,5% maior do que a Geração 1\nO ajuste nasal aprimorado reduz a neblina e melhora o conforto.\nO sistema de retenção de lente de 9 pontos protege a lente na moldura\nAdmite o desprendimento de postes triplos\nEspuma facial de pelúcia de camada dupla.\nLente de policarbonato com revestimento antiembaçante para visão nítida\nA pulseira revestida de silicone de 40 mm de largura mantém os óculos no lugar",
+    fichaTecnica: { "Marca": "100%", "Modelo": "Strata" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_994966-MLA99906617273_112025-F-oculos-100-strata-2-motocross-lente.webp"],
+    
+    variacoes: { Cores: ["Azul Escuro", "Ciano", "Verde Limão", "Vermelho"], Lente: ["Vermelha Espelhada", "Cinza Espelhada", "Lilás Espelhada", "Vermelha Espelhada"] },
+    
+    lentesPorCor: {
+      "Azul Escuro": ["Vermelha Espelhada"],
+      "Ciano": ["Cinza Espelhada"],
+      "Verde Limão": ["Lilás Espelhada"],
+      "Vermelho": ["Vermelha Espelhada"]
+    },
+
+    imagensPorCor: {
+      "Azul Escuro": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_994966-MLA99906617273_112025-F-oculos-100-strata-2-motocross-lente.webp",
+        "https://images.tcdn.com.br/img/img_prod/340177/oculos_motocross_100_strata_2_navy_com_lente_espelhada_72864_2_542fb35ea5983940f68bd68ee93d048b_20250707123815.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_814183-MLA107595146219_022026-F-oculos-100-strata-2-motocross-lente.webp"
+      ],
+      "Ciano": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_630374-MLB106912952894_022026-F-oculos-100-strata-2-motocross-lente.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_795463-MLB107594728441_022026-F-oculos-100-strata-2-motocross-lente.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_668769-MLA106914093390_022026-F-oculos-100-strata-2-motocross-lente.webp"
+      ],
+      "Verde Limão": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_951139-MLB106914439164_022026-F-oculos-100-strata-2-motocross-lente-espelhada.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_905568-MLB89825301108_082025-F.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_973493-MLB106914649670_022026-F-oculos-100-strata-2-motocross-lente-espelhada.webp"
+      ],
+      "Vermelho": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_877164-MLB106912954276_022026-F-oculos-100-strata-2-motocross-lente-espelhada.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_985270-MLB106912924080_022026-F-oculos-100-strata-2-motocross-lente-espelhada.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_875247-MLB106914650676_022026-F-oculos-100-strata-2-motocross-lente-espelhada.webp"
+      ]
+    },
+    linkwhatsapp: "https://wa.me/5511964467000",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-6294047044-oculos-100-strata-2-motocross-lente-espelhada-_JM?attributes=FRAME_COLOR%3AVmVyZGUtbGltw6Nv&quantity=1&picker=true"
+  },
+  {
+    id: 21,
+    nome: "Óculos 100% Armatic Espelhado",
+    categoria: "Acessórios",
+    preco: "R$ 620,00",
+    descricao: "Domine as pistas e trilhas com a tecnologia de quem é líder mundial em proteção visual. O 100% Airmatic foi projetado para atletas que exigem o máximo de fluxo de ar e clareza, garantindo que você foque apenas no caminho à frente, sem se preocupar com embaçamento ou desconforto.\n\nPor que escolher o 100% Airmatic?\nVentilação Inteligente: O sistema Airmatic prioriza a entrada de ar, mantendo o rosto fresco e evitando que a lente embace mesmo em condições de alta umidade ou esforço intenso.\n\nEspuma de Camada Tripla: Revestimento ultra-macio que absorve o suor de forma eficiente e se molda perfeitamente ao rosto, garantindo horas de uso sem marcas ou irritações.\n\nLentes de Alta Definição: Tecnologia de ponta que oferece proteção total contra raios UV e resistência superior a impactos, essencial para quem encara terrenos severos.",
+    fichaTecnica: { "Marca": "100%", "Modelo": "Armatic" },
+    imagens: ["https://http2.mlstatic.com/D_NQ_NP_2X_994966-MLA99906617273_112025-F-oculos-100-strata-2-motocross-lente.webp"],
+    
+    variacoes: { Cores: ["Branca", "Verde Limão"], Lente: ["Azul Espelhada", "Dourada Espelhada"] },
+    
+    lentesPorCor: {
+      "Branca": ["Azul Espelhada"],
+      "Verde Limão": ["Dourada Espelhada"],
+    },
+
+    imagensPorCor: {
+      "Branca": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_820044-MLB106910254388_022026-F-oculos-100-armatic-espelhado.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_965547-MLB107590036057_022026-F-oculos-100-armatic-espelhado.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_677472-MLA106911800202_022026-F-oculos-100-armatic-espelhado.webp"
+      ],
+      "Verde Limão": [
+        "https://http2.mlstatic.com/D_NQ_NP_2X_970161-MLB107592655831_022026-F-oculos-100-armatic-espelhado.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_731036-MLB107590039003_022026-F-oculos-100-armatic-espelhado.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_2X_834840-MLB106912070308_022026-F-oculos-100-armatic-espelhado.webp"
+      ],
+    },
+    linkwhatsapp: "https://wa.me/5511964467000",
+    linkMercadoLivre: "https://produto.mercadolivre.com.br/MLB-4484724593-oculos-100-armatic-espelhado-_JM?attributes=FRAME_COLOR%3AVmVyZGUtbGltw6Nv&quantity=1&picker=true"
   },
 ];

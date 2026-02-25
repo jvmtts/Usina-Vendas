@@ -32,6 +32,7 @@ export default function DetalhesProduto({ produtos = [] }) {
 
   const nomeVariacaoCor = listaVariacoes.find(v => v.nome.toLowerCase().includes('cor'))?.nome;
   const nomeVariacaoTamanho = listaVariacoes.find(v => v.nome.toLowerCase().includes('tamanho'))?.nome;
+  const nomeVariacaoLente = listaVariacoes.find(v => v.nome.toLowerCase().includes('lente'))?.nome;
 
   const corSelecionada = nomeVariacaoCor 
     ? (selecoes[nomeVariacaoCor] || listaVariacoes.find(v => v.nome === nomeVariacaoCor).opcoes[0]) 
@@ -41,6 +42,9 @@ export default function DetalhesProduto({ produtos = [] }) {
     if (variacao.nome === nomeVariacaoTamanho && corSelecionada && produto?.tamanhosPorCor?.[corSelecionada]) {
       return { ...variacao, opcoes: produto.tamanhosPorCor[corSelecionada] };
     }
+    if (variacao.nome === nomeVariacaoLente && corSelecionada && produto?.lentesPorCor?.[corSelecionada]) {
+      return { ...variacao, opcoes: produto.lentesPorCor[corSelecionada] };
+    }
     return variacao;
   });
 
@@ -48,12 +52,19 @@ export default function DetalhesProduto({ produtos = [] }) {
     if (nomeVariacaoTamanho && corSelecionada && produto?.tamanhosPorCor?.[corSelecionada]) {
       const tamanhosValidos = produto.tamanhosPorCor[corSelecionada];
       const tamanhoAtual = selecoes[nomeVariacaoTamanho] || listaVariacoes.find(v => v.nome === nomeVariacaoTamanho)?.opcoes[0];
-
       if (!tamanhosValidos.includes(tamanhoAtual)) {
         setSelecoes(prev => ({ ...prev, [nomeVariacaoTamanho]: tamanhosValidos[0] }));
       }
     }
-  }, [corSelecionada, id, nomeVariacaoTamanho, produto, selecoes, listaVariacoes]);
+
+    if (nomeVariacaoLente && corSelecionada && produto?.lentesPorCor?.[corSelecionada]) {
+      const lentesValidas = produto.lentesPorCor[corSelecionada];
+      const lenteAtual = selecoes[nomeVariacaoLente] || listaVariacoes.find(v => v.nome === nomeVariacaoLente)?.opcoes[0];
+      if (!lentesValidas.includes(lenteAtual)) {
+        setSelecoes(prev => ({ ...prev, [nomeVariacaoLente]: lentesValidas[0] }));
+      }
+    }
+  }, [corSelecionada, id, nomeVariacaoTamanho, nomeVariacaoLente, produto, selecoes, listaVariacoes]);
 
   let imagensExibidas = produto?.imagens?.length > 0 
     ? produto.imagens 
@@ -114,8 +125,14 @@ export default function DetalhesProduto({ produtos = [] }) {
 
   const urlWhatsappBase = produto.linkwhatsapp || produto.linkWhatsapp || "https://wa.me/5511999999999";
   const tamanhoSelecionadoURL = selecoes[nomeVariacaoTamanho] || listaVariacoesExibidas.find(v => v.nome === nomeVariacaoTamanho)?.opcoes[0] || '';
-  const textoCoresTamanho = `${corSelecionada ? ` na cor ${corSelecionada}` : ''}${tamanhoSelecionadoURL && tamanhoSelecionadoURL !== 'Único' ? `, tamanho ${tamanhoSelecionadoURL}` : ''}`;
-  const linkFinalWhatsapp = `${urlWhatsappBase}${urlWhatsappBase.includes('?') ? '&' : '?'}text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${produto.nome}${textoCoresTamanho}`)}`;
+  const lenteSelecionadaURL = selecoes[nomeVariacaoLente] || listaVariacoesExibidas.find(v => v.nome === nomeVariacaoLente)?.opcoes[0] || '';
+  
+  let textoVariaveis = '';
+  if (corSelecionada) textoVariaveis += ` na cor ${corSelecionada}`;
+  if (tamanhoSelecionadoURL && tamanhoSelecionadoURL !== 'Único') textoVariaveis += `, tamanho ${tamanhoSelecionadoURL}`;
+  if (lenteSelecionadaURL) textoVariaveis += `, lente ${lenteSelecionadaURL}`;
+
+  const linkFinalWhatsapp = `${urlWhatsappBase}${urlWhatsappBase.includes('?') ? '&' : '?'}text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${produto.nome}${textoVariaveis}`)}`;
   const linkFinalML = produto.linkMercadoLivre || "https://www.mercadolivre.com.br";
 
   return (
