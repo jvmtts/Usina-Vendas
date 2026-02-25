@@ -16,14 +16,14 @@ export default function CardProduto({ produto }) {
   } else {
     imagensParaCiclar = ['https://via.placeholder.com/600x600?text=Sem+Foto'];
   }
+
   useEffect(() => {
     let intervalo;
     if (isHovered && imagensParaCiclar.length > 1) {
       intervalo = setInterval(() => {
         setImgIndex((prev) => (prev + 1) % imagensParaCiclar.length);
-      }, 1200);
+      }, 1500);
     }
-  
     return () => {
       if (intervalo) clearInterval(intervalo);
     };
@@ -43,10 +43,15 @@ export default function CardProduto({ produto }) {
     return preco || 'R$ 0,00';
   };
 
+  const handleClick = () => {
+    sessionStorage.setItem('vitrineScrollY', window.scrollY.toString());
+    navigate(`/produto/${produto.id}`);
+  };
+
   return (
     <div 
       className="bg-white rounded-2xl p-4 md:p-5 flex flex-col justify-between border border-gray-100 shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-2 cursor-pointer group relative overflow-hidden"
-      onClick={() => navigate(`/produto/${produto.id}`)}
+      onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -58,7 +63,6 @@ export default function CardProduto({ produto }) {
                key={index}
                src={imgSrc} 
                alt={`${produto.nome} - variação ${index}`}
-
                className={`absolute inset-0 w-full h-full object-contain p-2 bg-white transition-all duration-700 ease-in-out will-change-[opacity,transform]
                  ${isActive ? 'opacity-100 z-10 scale-105' : 'opacity-0 z-0 scale-100'}
                  ${isHovered && isActive ? 'group-hover:scale-110' : ''} 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import CardProduto from './CardProduto';
 import { FaSearch } from 'react-icons/fa';
 
@@ -7,27 +7,30 @@ export default function Vitrine({ produtos = [], carregando }) {
   const categoriasFixas = ['Todos', 'Coletes', 'Âncoras', 'Acessórios', 'Roupas'];
   const [filtroCategoria, setFiltroCategoria] = useState('Todos');
   const [buscaExpandida, setBuscaExpandida] = useState(false);
-  const [limite, setLimite] = useState(6);
+  
+  const [limite, setLimite] = useState(() => parseInt(sessionStorage.getItem('vitrineLimite') || '6', 10));
   const [carregandoMais, setCarregandoMais] = useState(false);
   
   const inputRef = useRef(null);
 
   useEffect(() => {
-    setLimite(6);
-  }, [termoBusca, filtroCategoria]);
+    sessionStorage.setItem('vitrineLimite', limite.toString());
+  }, [limite]);
+
+  useLayoutEffect(() => {
+    const savedScroll = sessionStorage.getItem('vitrineScrollY');
+    if (savedScroll) {
+      window.scrollTo({ top: parseInt(savedScroll, 10), behavior: 'auto' });
+    }
+  }, []);
 
   const listaProdutos = produtos || [];
 
   const produtosFiltrados = listaProdutos.filter(produto => {
     const nome = produto.nome || '';
     const matchBusca = nome.toLowerCase().includes(termoBusca.toLowerCase());
-    
-    const categoriasDoProduto = Array.isArray(produto.categoria) 
-      ? produto.categoria 
-      : [produto.categoria];
-
+    const categoriasDoProduto = Array.isArray(produto.categoria) ? produto.categoria : [produto.categoria];
     const matchCategoria = filtroCategoria === 'Todos' || categoriasDoProduto.includes(filtroCategoria);
-    
     return matchBusca && matchCategoria;
   });
 
@@ -35,13 +38,13 @@ export default function Vitrine({ produtos = [], carregando }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop + 100 >= document.documentElement.scrollHeight) {
+      if (window.innerHeight + document.documentElement.scrollTop + 200 >= document.documentElement.scrollHeight) {
         if (!carregandoMais && limite < produtosFiltrados.length) {
           setCarregandoMais(true);
           setTimeout(() => {
             setLimite(prev => prev + 6);
             setCarregandoMais(false);
-          }, 800);
+          }, 500);
         }
       }
     };
@@ -49,10 +52,21 @@ export default function Vitrine({ produtos = [], carregando }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [carregandoMais, limite, produtosFiltrados.length]);
 
+  const handleFilterChange = (novaCategoria) => {
+      setFiltroCategoria(novaCategoria);
+      setLimite(6);
+      sessionStorage.setItem('vitrineLimite', '6');
+  }
+
+  const handleSearchChange = (novoTermo) => {
+      setTermoBusca(novoTermo);
+      setLimite(6);
+      sessionStorage.setItem('vitrineLimite', '6');
+  }
+
   return (
-    <section className="w-[92%] max-w-[1800px] mx-auto py-10 bg-white no-select">
+    <section className="w-[92%] max-w-[1800px] mx-auto py-10 bg-white no-select min-h-screen">
       <div className="flex flex-col md:flex-row justify-center items-center mb-10 gap-5 min-h-[50px] relative">
-        
         <div className={`flex gap-3 justify-center flex-wrap transition-all duration-500 ${buscaExpandida ? 'md:opacity-40 md:blur-[1px]' : 'opacity-100'}`}>
           {categoriasFixas.map(cat => (
             <button
@@ -60,7 +74,7 @@ export default function Vitrine({ produtos = [], carregando }) {
               className={`border-0 py-2 px-5 rounded-full cursor-pointer font-bold transition-all duration-300 text-sm ${
                 filtroCategoria === cat ? 'bg-[#ff7b00] text-white shadow-md scale-105' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
-              onClick={() => setFiltroCategoria(cat)}
+              onClick={() => handleFilterChange(cat)}
             >
               {cat}
             </button>
@@ -99,7 +113,7 @@ export default function Vitrine({ produtos = [], carregando }) {
               buscaExpandida ? 'opacity-100' : 'opacity-0'
             }`}
             value={termoBusca}
-            onChange={(e) => setTermoBusca(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             tabIndex={buscaExpandida ? 0 : -1}
           />
         </div>
