@@ -233,11 +233,28 @@ export default function DetalhesProduto({ produtos = [] }) {
               </div>
             )}
 
-            <div className="mt-2 flex flex-col gap-4 w-full md:w-[90%]">
-              <a href={linkFinalWhatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-[#1ebd5c] hover:bg-[#18a24e] text-white py-3 md:py-[14px] px-6 rounded-full font-bold text-[1.05rem] cursor-pointer shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 no-underline">
-                <FaWhatsapp className="text-[1.5rem]" /> Comprar pelo WhatsApp
+            <div className="mt-4 flex flex-col gap-5 w-full md:w-[90%] relative">
+              <a 
+                href={linkFinalWhatsapp} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="relative flex flex-col items-center justify-center w-full bg-[#1ebd5c] hover:bg-[#18a24e] text-white py-3 md:py-[14px] px-6 rounded-2xl md:rounded-full cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 no-underline"
+              >
+                <div className="flex items-center gap-2 font-extrabold text-[1.1rem] md:text-[1.2rem]">
+                  <FaWhatsapp className="text-[1.6rem] md:text-[1.8rem]" /> 
+                  <span>Comprar pelo WhatsApp</span>
+                </div>
+                
+                <span className="text-xs md:text-sm font-medium mt-1 opacity-90 tracking-wide text-center">
+                  Garante 3% OFF + 5% extra pagando no PIX
+                </span>
+                
+                <span className="absolute -top-4 -right-2 md:-top-5 md:-right-4 bg-[#ff7b00] text-white text-[0.8rem] md:text-sm px-3 md:px-4 py-1.5 rounded-full font-black shadow-xl border-2 border-white transform rotate-6 hover:rotate-0 transition-transform duration-300">
+                  🔥 ATÉ 8% OFF
+                </span>
               </a>
-              <a href={linkFinalML} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-transparent text-[#ff7b00] border-2 border-[#ff7b00] py-3 md:py-[12px] px-6 rounded-full font-bold text-[1.05rem] cursor-pointer shadow-sm hover:bg-[#fff5eb] hover:shadow-md hover:-translate-y-1 transition-all duration-300 no-underline">
+
+              <a href={linkFinalML} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-transparent text-[#ff7b00] border-2 border-[#ff7b00] py-3 md:py-[14px] px-6 rounded-full font-bold text-[1.05rem] cursor-pointer shadow-sm hover:bg-[#fff5eb] hover:shadow-md hover:-translate-y-1 transition-all duration-300 no-underline">
                 <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/logo__small@2x.png" alt="Mercado Livre" className="h-7 md:h-8 w-auto object-contain" />
                 Comprar no Mercado Livre
               </a>
