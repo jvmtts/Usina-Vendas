@@ -4,9 +4,8 @@ import { FaArrowUp } from 'react-icons/fa';
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Função que monitora a rolagem da página
+
   const toggleVisibility = () => {
-    // Mostra o botão se rolar mais de 300px para baixo
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
@@ -14,19 +13,19 @@ export default function ScrollToTopButton() {
     }
   };
 
-  // Função para subir ao topo suavemente
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // O segredo da subida suave
+      behavior: 'smooth',
     });
   };
 
   useEffect(() => {
-    // Adiciona o "espião" de rolagem quando o componente monta
+
     window.addEventListener('scroll', toggleVisibility);
 
-    // Remove o "espião" quando desmonta para não causar vazamento de memória
+
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
